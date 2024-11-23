@@ -6,9 +6,9 @@
     - Static variables
 
 > [!WARNING]
-> The name must begin with a letter (a-z, A-Z), an underscore (_), or a dollar sign ($).  
+> The name must begin with a letter (a-z, A-Z), an underscore (\_), or a dollar sign ($).  
 > The variable name cannot contain spaces.  
-> From the second character onwards, you can use letters (a-z, A-Z), underscores (_), dollar signs ($), or digits (0-9).  
+> From the second character onwards, you can use letters (a-z, A-Z), underscores (\_), dollar signs ($), or digits (0-9).  
 > The variable name cannot be the same as any reserved keywords.  
 > Java is case-sensitive (uppercase and lowercase letters are considered different).  
 
