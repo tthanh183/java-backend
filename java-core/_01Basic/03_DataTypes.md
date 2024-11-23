@@ -6,8 +6,6 @@ In Java, data types are categorized into two types:
 
 1. **Primitive Data Types**
 
-Java provides the following basic data types:
-
 | Data Type | Description                                                                                             |
 |-----------|---------------------------------------------------------------------------------------------------------|
 | `byte`    | Stores integer values with 1 byte (8 bits). Range: -128 to 127. Default value: 0.                       |
