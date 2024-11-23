@@ -7,6 +7,6 @@
 - **Interpretation**: Translates and executes each line of code one by one.
 
 > [!NOTE]
-> - From a `.Java` file, it is compiled into a `.class` file.
-> - From the `.class` file, the JVM interprets it into machine code.
+> From a `.Java` file, it is compiled into a `.class` file.  
+> From the `.class` file, the JVM interprets it into machine code.  
 
