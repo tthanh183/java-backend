@@ -1,4 +1,4 @@
-## Variables
+### Variables
 0. **Variables Declaration in Java**
 - In Java, a variable is the name of a memory location that holds data. There are 3 types of variables in Java:
     - Local variables

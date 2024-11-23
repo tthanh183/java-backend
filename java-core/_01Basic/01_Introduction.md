@@ -1,6 +1,4 @@
-# Basic Java
-
-## Introduction to Java
+### Introduction to Java
 - **JVM** (Java Virtual Machine) is the Java virtual machine - it executes bytecode into machine code.
 - **JRE** (Java Runtime Environment) is the runtime environment, which includes the JVM and various libraries and files used by the JVM during runtime.
 - **JDK** (Java Development Kit) is a set of tools that helps developers build Java applications, including the JRE and development tools.
