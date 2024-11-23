@@ -50,6 +50,7 @@ public class Variable {
     }
 }
 ```
+Output:
 ```
 The value of n is: 10
 ```
@@ -70,6 +71,7 @@ public class Variable {
     }
 }
 ```
+Output:
 ```
 Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
     The local variable n may not have been initialized
