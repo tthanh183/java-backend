@@ -10,7 +10,7 @@ access-modifier static/non-static returnType methodName(list[] parameters) {
 - return type: The type of value the method returns, which can be:
   - void: If there is no return value.
   - a type: If the method returns a primitive type, object, etc.
-    > [!NOTICE]
+    > [!WARNING]
     > If there is a return type, the method must use the return keyword, and the type of the return value must `match` the type specified at the beginning of the method.
 - Method name: Should be a verb, noun, and follow camelCase rules.
 - parameter list: Can have zero or more parameters.
