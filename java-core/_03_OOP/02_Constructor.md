@@ -2,7 +2,7 @@
 
 1. **Constructor**
 
-Constructor  is a special method that is used to initialize an object. It is called when an object of a class is created.
+Constructor  is a special method that is used to initialize an object. It is called when an object of a class is created.  
 2. **Rules for Creating Constructors in Java**
 
 There are 2 basic rules for creating constructors:
@@ -62,7 +62,7 @@ Output:
 ```
 4. **Constructor Overloading in Java**
 
-Constructor Overloading is a technique in Java. You can create multiple constructors in the same class with different parameter lists. The compiler differentiates these constructors based on the number and type of parameters passed.
+Constructor Overloading is a technique in Java. You can create multiple constructors in the same class with different parameter lists. The compiler differentiates these constructors based on the number and type of parameters passed.  
 Example:
 ```java
 class Student {  
