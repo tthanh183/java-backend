@@ -8,8 +8,6 @@ while (condition) {
 ```
 Example:
 ```java
-package vn.com.example;
-
 public class WhileExample1 {
     public static void main(String[] args) {
         int i = 1;
@@ -31,8 +29,6 @@ If you set the loop condition to true, the while loop will run indefinitely... u
 
 Example:
 ```java
-package vn.com.example;
-
 public class WhileExample2 {
     public static void main(String[] args) {
         while (true) {
