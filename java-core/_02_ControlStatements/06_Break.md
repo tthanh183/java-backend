@@ -49,5 +49,5 @@ Output:
 ```
 2. **Using Break with a switch-case Statement**
 
-To understand how to use `break` with a switch-case statement, you can refer to this lesson on the [switch-case statement in Java](#Switch-Case Statement).
+To understand how to use `break` with a switch-case statement, you can refer to this lesson on the [switch-case statement in Java](02_SwitchCase.md#switch-case-statement).
 
