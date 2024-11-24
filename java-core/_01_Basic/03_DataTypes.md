@@ -1,4 +1,4 @@
-### Data Types
+### Data Types in Java
 
 In Java, data types are categorized into two types:
 - Primitive Data Types
