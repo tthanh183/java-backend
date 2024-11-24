@@ -42,3 +42,83 @@ Output:
 Compile Time Error
 Compile Time Error
 ```
+> [!NOTE]
+>  A class itself cannot be declared as private or protected, except for nested classes.
+
+3. **Default (no modifier) Access Modifier**
+
+If no access modifier is specified, it is considered the default access modifier. The default access modifier allows access only within the same package.
+
+Example:
+```java
+package pack;
+class A {
+    void msg() {
+        System.out.println("Hello");
+    }
+}
+```
+```java
+package mypack;
+import pack.*;
+public class B {
+    public static void main(String args[]) {
+        A obj = new A();            // Compile Time Error
+        obj.msg();                  // Compile Time Error
+    }
+}
+```
+
+
+4. **Protected Access Modifier**
+
+The protected access modifier allows access within the same package and also outside the package, but only if inheritance is involved. It can be applied to variables, methods, and constructors but not to classes.
+Example:
+```java
+package pack;
+protected class A {
+    protected void msg() {
+        System.out.println("Hello");
+    }
+}
+```
+```java
+package mypack;
+import pack.*;
+public class B extends A {
+    public static void main(String args[]) {
+        B obj = new B();
+        obj.msg();
+    }
+}
+```
+Output:
+```
+Hello
+```
+5. **Public Access Modifier**
+
+The public access modifier allows access from anywhere, without any restrictions on package.
+Example:
+```java
+package pack;
+public class A {
+    public void msg() {
+        System.out.println("Hello");
+    }
+}
+```
+```java
+package mypack;
+import pack.*;
+public class B {
+    public static void main(String args[]) {
+        A obj = new A();
+        obj.msg();
+    }
+}
+```
+Output:
+```
+Hello
+```
