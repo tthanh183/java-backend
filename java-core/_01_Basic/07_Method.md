@@ -1,4 +1,4 @@
-### Method
+### Method 
 A method is a group of statements that perform a specific task. The purpose is to reuse code.
 ```
 access-modifier static/non-static returnType methodName(list[] parameters) {
