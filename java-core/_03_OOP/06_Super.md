@@ -1,4 +1,4 @@
-### Super Keyword in Java
+### `Super` Keyword in Java
 The `super` keyword in Java is a reference variable used to refer to the immediate parent class object. Whenever you create an instance of a subclass, an instance of the superclass is implicitly created and can be referenced by the `super` keyword.
 
 In Java, the `super` keyword has three main uses:
