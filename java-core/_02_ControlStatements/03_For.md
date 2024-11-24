@@ -1,4 +1,4 @@
-### For loop
+### For loop in Java
 The for loop in Java is used to repeat a part of the program multiple times. If the number of iterations is fixed, the for loop is recommended. However, if the number of iterations is not fixed, it is better to use a while or do-while loop.
 
 There are three types of for loops in Java:

@@ -1,4 +1,4 @@
-### Switch-Case Statement
+### Switch-Case Statement in Java
 The switch-case statement in Java is used to execute one or more blocks of code based on multiple conditions.
 ```
 switch (expression) {    

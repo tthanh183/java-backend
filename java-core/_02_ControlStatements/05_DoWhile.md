@@ -1,4 +1,4 @@
-### Do-While Loop
+### Do-While Loop in Java
 1. **Do-While Loop**
 The do-while loop in Java is used to repeat a part of the program several times. It is similar to the while loop, except that the do-while loop executes the block of code at least once, even if the condition is false.
 ```

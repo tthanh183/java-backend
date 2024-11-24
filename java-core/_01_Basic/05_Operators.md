@@ -1,4 +1,4 @@
-### Operators
+### Operators in Java
 An operator in Java is a symbol used to perform a specific operation or function. Java provides several types of operators:  
 - Arithmetic Operators
 - Bitwise Operators

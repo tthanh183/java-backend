@@ -1,4 +1,4 @@
-### Continue
+### Continue Keyword in Java
 The continue keyword in Java is used to skip the current iteration of a loop and continue with the next iteration. When the continue statement is executed, the remaining code inside the loop after continue is not executed for that iteration, and the loop proceeds to the next cycle. In the case of a nested loop, continue only affects the inner loop.
 
 Example using `continue` with a `for` loop:

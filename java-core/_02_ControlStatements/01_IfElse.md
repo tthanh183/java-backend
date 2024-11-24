@@ -1,4 +1,4 @@
-### If-Else statement
+### If-Else statement in Java
 The "if" Statement in Java is used to evaluate a boolean condition. It returns either True or False. There are different forms of the if-else statement in Java, as follows:
 - If statement
 - If-Else Statement

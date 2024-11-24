@@ -1,4 +1,4 @@
-### Type Casting
+### Type Casting in Java
 Type casting in Java is the process of assigning the value of a variable of one data type to a variable of a different data type.
 In Java, there are two types of type casting:
 - Widening: This is the process of converting a value from a data type with a smaller size to a data type with a larger size. This type of casting does not lose any information.

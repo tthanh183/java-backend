@@ -1,4 +1,4 @@
-### While Loop
+### While Loop in Java
 1. **While Loop**
 The while loop in Java is used to repeat a part of the program several times. If the number of iterations is not predetermined, the while loop is recommended to use in this case.
 ```
