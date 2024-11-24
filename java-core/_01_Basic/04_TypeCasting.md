@@ -12,8 +12,6 @@ Type casting (Widening): This is the process of converting a value from a data t
 
 Example:
 ```java
-package vn.com.example;
-
 public class TestWidening {
     public static void main(String[] args) {
         int i = 100;
@@ -39,8 +37,6 @@ Type casting (Narrowing): This is the process of converting a value from a data 
 
 Example:
 ```java
-package vn.com.example;
-
 public class TestNarrowing {
     public static void main(String[] args) {
         double d = 100.04;
