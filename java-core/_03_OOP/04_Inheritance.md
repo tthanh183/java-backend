@@ -143,3 +143,7 @@ Questions: Why Multiple Inheritance is Not Supported in Java?
 To reduce complexity and simplify the language, Java does not support multiple inheritance through classes.  
 Consider a scenario with three classes A, B, and C, where C inherits from both A and B. If A and B have methods with the same name, it would be unclear which method the subclass C should invoke. This ambiguity can lead to confusion and errors during runtime.  
 Therefore, it is better to catch such errors at compile-time rather than at runtime. Java will give a compile-time error if you attempt to inherit from two classes.
+
+3. **Object Class in Java** 
+
+The Object class is the root class of Java. Every class in Java is a subclass of the Object class. If a class does not extend any other class, it is implicitly a subclass of the Object class. The Object class provides several methods that are common to all classes in Java, such as `toString()`, `equals()`, `hashCode()`, and `getClass()`.
