@@ -102,8 +102,6 @@ To alter the precedence in an expression, you can use parentheses (()):
 
 Example:
 ```java
-package vn.com.example;
-
 public class Test {
     public static void main(String[] args) {
         int a = 20;
