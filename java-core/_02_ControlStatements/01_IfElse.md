@@ -15,8 +15,6 @@ if(condition) {
 ```
 Example:
 ```Java
-package vn.com.example;
-
 public class Test {
     public static void main(String[] args) {
         int age = 20;
@@ -44,8 +42,6 @@ if (condition) {
 ```
 Example:
 ```java
-package vn.com.example;
-
 public class Test {
     public static void main(String[] args) {
         int number = 13;
@@ -83,8 +79,6 @@ else {
 ```
 Example:
 ```java
-package vn.com.example;
-
 public class Test {
     public static void main(String[] args) {
         int marks = 65;
