@@ -8,8 +8,6 @@ do {
 ```
 Example:
 ```java
-package vn.com.example;
-
 public class DoWhileExample1 {
     public static void main(String[] args) {
         int a = 1, sum = 0;
@@ -30,8 +28,6 @@ Sum of 1 to 5 is 15
 If you set the loop condition to true, the do-while loop will run indefinitely... until you stop the program in your IDE (such as Eclipse or NetBeans) or press Ctrl + C in the command line.
 Example:
 ```java
-package vn.com.example;
-
 public class DoWhileExample2 {
     public static void main(String[] args) {
         do {
