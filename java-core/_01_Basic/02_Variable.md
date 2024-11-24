@@ -15,8 +15,6 @@
 - The syntax for declaring a variable is: `DataType varName [ = value] [, varName2] [ = value2]...;
 
 ```Java
-package vn.com.example;
-
 public class Variable {
     public static float PI = 3.14;                      // This is a static variable
     int n;                                              // This is an instance variable
@@ -35,8 +33,6 @@ Local variables are declared within methods, constructors, or blocks.
 
 Example 1:
 ```java
-package vn.com.example;
-
 public class Variable {
      
     public void sayHello() {
@@ -56,8 +52,6 @@ The value of n is: 10
 ```
 Example 2:
 ```java
-package vn.com.example;
-
 public class Variable {
      
     public void sayHello() {
@@ -86,8 +80,6 @@ An instance variable is declared within a class, outside of any methods, constru
 - Instance variables have default values depending on their data type. For example, if the type is int, short, or byte, the default value is 0. If it is double, the default value is 0.0d, and so on. Therefore, you do not need to initialize instance variables before using them.
 - Inside the class where the instance variable is declared, you can directly refer to it by name when using it throughout the class.
 ```java
-package vn.com.example;
-
 public class Student {
     // Instance variable "name" of type String, with default value null
     public String name;
@@ -133,8 +125,6 @@ A static variable is declared within a class using the static keyword, outside o
 - Static variables are accessed through the name of the class that contains them, with the syntax: ClassName.variableName.
 - Inside the class, static methods use static variables by referring to them directly is also declared with the static keyword.
 ```java
-package vn.com.example;
-
 public class Student {
     // Static variable 'name'
     public static String name = "Nguyen Van A";
