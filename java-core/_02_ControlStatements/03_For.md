@@ -17,8 +17,6 @@ for (initialization; condition; increment/decrement) {
 ```
 Example:
 ```java
-package vn.com.example;
-
 public class ForExample {
     public static void main(String[] args) {
         for (int i = 1; i <= 10; i++) {
@@ -41,8 +39,6 @@ for (Type var : array) {
 ```
 Example:
 ```java
-package vn.com.example;
-
 public class ForEachExample {
     public static void main(String[] args) {
         int[] arr = {12, 23, 44, 56, 78};
@@ -67,8 +63,6 @@ for (initialization; condition; increment/decrement) {
 ```
 Example:
 ```java
-package vn.com.example;
-
 public class LabeledForExample {
     public static void main(String[] args) {
         aa: for (int i = 1; i <= 3; i++) {
