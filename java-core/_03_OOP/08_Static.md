@@ -135,8 +135,8 @@ Output:
 
 ### Frequently Asked Questions
 Question: Why is the main method in Java static?  
-Answer: The main method is static because it is called by the Java Virtual Machine (JVM) before any objects are created. If the main method were non-static, the JVM would need to create an instance of the class first, which could lead to memory allocation issues.
-Question: Can we override a static method in Java?
-Answer: No, you cannot override a static method in Java. However, you can create a method with the same signature in the subclass, which is called method hiding.
-Question: Can we run a Java program without a main method?
-Answer: Yes, one way to do this is using a static block in earlier versions of the JDK (before JDK 1.7). However, from JDK 1.7 onward, the JVM requires a main method to start execution.
+Answer: The main method is static because it is called by the Java Virtual Machine (JVM) before any objects are created. If the main method were non-static, the JVM would need to create an instance of the class first, which could lead to memory allocation issues.  
+Question: Can we overload or override a static method in Java?  
+Answer: Yes, you can overload a static method in Java, but you cannot override it. We can hide a static method in a subclass by declaring a static method with the same signature in the subclass. This is known as method hiding.  
+Question: Can we run a Java program without a main method?  
+Answer: Yes, one way to do this is using a static block in earlier versions of the JDK (before JDK 1.7). However, from JDK 1.7 onward, the JVM requires a main method to start execution.  
