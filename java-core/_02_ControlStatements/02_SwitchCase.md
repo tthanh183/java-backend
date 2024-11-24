@@ -19,8 +19,6 @@ switch (expression) {
 ```
 Example:
 ```java
-package vn.com.example;
-
 public class SwitchExample {
     public static void main(String[] args) {
         int number = 20;
@@ -50,8 +48,6 @@ If the break keyword is not used in a switch-case statement, the program will co
 
 Example:
 ```java
-package vn.com.example;
-
 public class SwitchExample2 {
     public static void main(String[] args) {
         int number = 20;
