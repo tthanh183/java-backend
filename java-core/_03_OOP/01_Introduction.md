@@ -96,8 +96,19 @@ Output:
 ```
 Factorial of 5 is: 120
 ```
+4. **Difference between Object and Class**
 
-
+| Class                                                                | Object                                                               |
+|----------------------------------------------------------------------|----------------------------------------------------------------------|
+| A class is a blueprint or template from which objects are created.   | An object is an instance of a class.                                 |
+| A class is a logical entity.                                         | An object is a real-world entity.                                    |
+| A class is declared only once.                                       | An object is created many times as per the requirement.              |
+| A class is declared using the `class` keyword.                       | An object is created using the `new` keyword.                        |
+| A class is created in the method area.                               | An object is created in the heap memory.                             |
+| A class is used to define the properties and behaviors of an object. | An object is used to access the properties and behaviors of a class. |
+| A class is used to define the methods of an object.                  | An object is used to call the methods of a class.                    |
+| A class is used to define the data members of an object.             | An object is used to access the data members of a class.             |
+| A class is used to define the static members of an object.           | An object is used to access the non-static members of a class.       |
 
 
 
