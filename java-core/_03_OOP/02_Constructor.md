@@ -3,6 +3,7 @@
 1. **Constructor**
 
 Constructor  is a special method that is used to initialize an object. It is called when an object of a class is created.  
+
 2. **Rules for Creating Constructors in Java**
 
 There are 2 basic rules for creating constructors:
