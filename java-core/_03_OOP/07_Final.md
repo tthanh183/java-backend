@@ -82,8 +82,6 @@ error: cannot inherit from final Bike
 class Honda extends Bike {
                    ^
 ```
-Question: Can a final method be inherited?  
-Answer: Yes, but you cannot override it.
 4. **Blank Final Variable**
 
 A final variable that is not initialized at the time of declaration is known as a blank final variable. We must initialize the blank final variable in the constructor of the class.
@@ -127,10 +125,14 @@ Output:
 ```
 70
 ```
-Question: What is final parameter?
-Answer: If you declare any parameter as final, you cannot change the value of it.
-Question: Can we declare a constructor as final?
-Answer: No, because the constructor is never inherited.
+
+### Frequently Asked Questions
+Question: Can a final method be inherited?    
+Answer: Yes, but you cannot override it.  
+Question: What is final parameter?  
+Answer: If you declare any parameter as final, you cannot change the value of it.  
+Question: Can we declare a constructor as final?  
+Answer: No, because the constructor is never inherited.  
 
 
 
