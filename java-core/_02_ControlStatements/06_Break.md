@@ -22,7 +22,7 @@ Output:
 3
 4
 ```
-Example of Using Break in a Nested for Loop
+Example of using `Break` in a Nested for Loop
 ```java
 public class BreakExample2 {
     public static void main(String[] args) {
