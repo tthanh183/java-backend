@@ -11,6 +11,7 @@ In Java, `this` keyword is used in six different ways:
 1. **To refer to the instance variable of the current class**
 
 The `this` keyword in Java can be used to refer to the instance variable of the current class. This is particularly useful when there is a name conflict between the instance variable and the parameter in a method or constructor.
+Example:
 ```java
 public class Student {
     int id;
@@ -39,6 +40,7 @@ Output:
 0 null
 ```
 In the example above, the parameter names in the constructor are the same as the instance variable names, so the instance variables were not assigned correctly. To fix this issue, we need to use the `this` keyword to distinguish between the local variable and the instance variable.
+Example:
 ```java
 public class Student {
     int id;
@@ -71,6 +73,7 @@ If the local variable and the instance variable have different names, there's no
 2. **`this()` can be used to call the constructor of the current class**
 
 The `this()` method can be used to call a constructor of the current class. This is useful when you have multiple constructors in a class and you want to reuse one constructor within another.
+Example:
 ```java
 public class Student {
     int id;
@@ -142,9 +145,10 @@ Output:
 ```
 > [!NOTE]
 > The `this()` method must be the first statement in the constructor.
-3. **Calling methods of the current classs**
+3. **Calling methods of the current class**
 
-You can use the this keyword to call methods of the current class. If you don't use this, the compiler will automatically add the this keyword when calling the method.
+You can use the `this` keyword to call methods of the current class. If you don't use this, the compiler will automatically add the this keyword when calling the method.
+Example:
 ```java
 public class Student {
     void display() {
@@ -168,6 +172,7 @@ Method is invoked
 4. **Using `this` as a parameter in a method.**
 
 The `this` keyword can be used as a parameter in a method. This usage is primarily seen in event handling scenarios.
+Example:
 ```java
 public class Student {
     void m(Student obj) {
@@ -192,6 +197,7 @@ The `this` keyword is used as a parameter in event handling or in situations whe
 5. ** Using this as a parameter in a Constructor**
   
 You can also pass `this` as a parameter in a constructor. This feature is useful when we need to use an object in multiple classes.
+Example:
 ```java
 class A {
     int data = 10;
@@ -226,6 +232,7 @@ Output:
 6. **Using this to return the instance of the current class**
    
 We can return the instance of the current class using the `this` keyword. In this case, the return type of the method must be of the class type (not a primitive type).
+Example:
 ```java
 public class Student {
     Student get() {
