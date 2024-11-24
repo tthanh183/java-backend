@@ -11,5 +11,6 @@ access-modifier static/non-static returnType methodName(list[] parameters) {
   - void: If there is no return value.
   - a type: If the method returns a primitive type, object, etc.
   > [!NOTE]
-  > This is a note message.- Method name: Should be a verb, noun, and follow camelCase rules.
+  > This is a note message.
+- Method name: Should be a verb, noun, and follow camelCase rules.
 - parameter list: Can have zero or more parameters.
