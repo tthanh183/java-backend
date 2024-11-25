@@ -48,3 +48,28 @@ Output:
 java.lang.ArithmeticException: / by zero
 rest of the code
 ```
+
+### Nested Try-Catch Block in Java
+
+In Java, you can use a `try-catch` block within another `try-catch` block. This is known as a nested `try-catch` block.
+
+Example:
+```java
+public class NestedTryCatchExample {
+    public static void main(String[] args) {
+        try {
+            try {
+                int arr[] = {1, 2, 3, 4};
+                System.out.println(arr[10]); // may throw an exception
+            } catch (ArithmeticException e) {
+                System.out.println("Arithmetic Exception occurs");
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBounds Exception occurs");
+        } catch (Exception e) {
+            System.out.println("Parent Exception occurs");
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
