@@ -4,9 +4,10 @@ The ResultSetMetaData interface in Java is used to retrieve metadata from a Resu
 
 Metadata refers to information about the data. For example, metadata of a file might include the file creation date, size, etc. Metadata of a table in a database includes information about the table, such as the table name, column names, column data types, and more.
 
-How to get ResultSet metadata:
+How to get ResultSet metadata:  
+The getMetaData() method of the ResultSet interface returns a ResultSetMetaData object. Syntax:
 ```
-ResultSetMetaData rsmd = resultSet.getMetaData();
+ResultSetMetaData getMetaData() throws SQLException;
 ```
 
 Methods of the ResultSetMetaData interface:
