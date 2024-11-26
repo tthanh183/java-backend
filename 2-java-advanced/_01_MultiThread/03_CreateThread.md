@@ -13,6 +13,8 @@ Common Constructors of the Thread class:
 - Thread(String name)
 - Thread(Runnable target)
 - Thread(Runnable target, String name)
+- Thread(ThreadGroup group, Runnable target)
+- Thread(ThreadGroup group, Runnable target, String name)
 
 Common methods of the Thread class:
 - public void start(): starts the thread. The JVM calls the run() method on the thread.
