@@ -28,7 +28,7 @@ future.complete("Hello, World!");
 ```
 
 > [!NOTE]  
-> CompletableFuture<T>: A `CompletableFuture` that may contain a value of type T or an exception.
+> CompletableFuture<T>: s a generic class in Java, meaning it can hold a value of any type T that you specify. In this context: T is the type of the value that the CompletableFuture will hold. You can think of it as the return type of the asynchronous task.
 2. **CompletableFuture Methods**
 
 - `thenApply()` method: Applies a function to the result of the `CompletableFuture` when it completes.
