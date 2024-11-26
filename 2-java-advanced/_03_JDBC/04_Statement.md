@@ -1,8 +1,8 @@
 ### Statement
 
-The Statement interface in Java provides methods for executing SQL queries against a database. The Statement interface is a factory for ResultSet, meaning it provides methods to create ResultSet objects.
+The `Statement` interface in Java provides methods for executing SQL queries against a database. The `Statement` interface is a factory for `ResultSet`, meaning it provides methods to create `ResultSet` objects.
 
-Some important methods of the Statement interface are:
+Some important methods of the `Statement` interface are:
 
 | Method          | Description                                                                                     |
 |-----------------|-------------------------------------------------------------------------------------------------|
