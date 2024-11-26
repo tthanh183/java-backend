@@ -128,3 +128,20 @@ CompletableFuture<String> future2 = CompletableFuture.supplyAsync(() -> {
 });
 CompletableFuture<Object> anyOfFuture = CompletableFuture.anyOf(future1, future2);
 ```
+
+5. **Retrieving Results**
+
+- `get()` method: Waits for the `CompletableFuture` to complete and returns the result.
+```java 
+CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
+    return "Hello, World!";
+});
+String result = future.get();
+```
+- `join()` method: Waits for the `CompletableFuture` to complete and returns the result, but does not throw checked exceptions.
+```java
+CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
+    return "Hello, World!";
+});
+String result = future.join();
+```
