@@ -1,10 +1,10 @@
 ### Connection 
 
-A Connection in Java is a session between the Java application and the database. The Connection object is used to create Statement, PreparedStatement, and DatabaseMetaData. The Connection interface provides several methods for managing transactions, such as commit(), rollback(), and more.
+A `Connection` in Java is a session between the Java application and the database. The `Connection` object is used to create Statement, PreparedStatement, and DatabaseMetaData. The `Connection` interface provides several methods for managing transactions, such as `commit()`, `rollback()`, and more.
 
 By default, the connection performs a commit to apply changes to the database after executing queries.
 
-Some important methods of the Connection interface are:  
+Some important methods of the `Connection` interface are:  
 
 | Method             | Description                                                                                  |
 |--------------------|----------------------------------------------------------------------------------------------|
