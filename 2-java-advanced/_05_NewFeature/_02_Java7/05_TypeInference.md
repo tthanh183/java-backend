@@ -23,7 +23,7 @@ class GenericClass<X> {
 
 public class TypeInference2 {
     public static void main(String[] args) {
-        GenericClass<String> gc2 = new GenericClass<>("Hello");
+        GenericClass<String> gc2 = new GenericClass<>("Hello");         // String is type of X, T is inferred as String
     }
 }
 
