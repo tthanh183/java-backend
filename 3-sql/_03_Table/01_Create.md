@@ -36,6 +36,18 @@ Once you create a table, you can check the table structure using the `DESCRIBE` 
 DESCRIBE employees;
 ```
 
+Output:
+```
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| id      | int(11)      | NO   | PRI | NULL    |       |
+| name    | varchar(50)  | YES  |     | NULL    |       |
+| age     | int(11)      | YES  |     | NULL    |       |
+| address | varchar(255) | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+```
+
 2. **Create Table from Existing Table**
 
 Instead of creating a new table every time, one can also copy an existing table and its contents including its structure, into a new table. This can be done using a combination of the CREATE TABLE statement and the SELECT statement. Since its structure is copied, the new table will have the same column definitions as the original table. Furthermore, the new table would be populated using the existing values from the old table.
@@ -52,4 +64,15 @@ Example:
 ```sql
 CREATE TABLE employees_copy AS
 SELECT * FROM employees;
+```
+
+Output:
+```
++----+------------+-----+-------------+
+| id | name       | age | address     |
++----+------------+-----+-------------+
+| 1  | John Doe   | 25  | 123 Main St |
+| 2  | Jane Doe   | 30  | 456 Elm St  |
+| 3  | John Smith | 35  | 789 Oak St  |
++----+------------+-----+-------------+
 ```
