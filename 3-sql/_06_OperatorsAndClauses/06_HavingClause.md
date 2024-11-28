@@ -45,6 +45,3 @@ The output of the above query will be:
 | HR        | 3               |
 | IT        | 3               |
 
-
-    
-
