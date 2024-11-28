@@ -12,22 +12,8 @@ WHERE [condition];
 ```
 
 Example:
-```sql
-CREATE TABLE employees (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
-    age INT,
-    salary DECIMAL(10, 2)
-);
 
-INSERT INTO employees (id, name, age, salary)
-VALUES (1, 'John Doe', 30, 50000.00),
-       (2, 'Jane Doe', 28, 45000.00),
-       (3, 'Alice', 25, 40000.00);
-
-```
-
-The table `employees` will look like this:
+Let's consider a table named `employees` with the following data:
 
 | id | name     | age | salary   |
 |----|----------|-----|----------|
