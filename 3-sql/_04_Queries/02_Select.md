@@ -65,4 +65,3 @@ After executing the above query, the result will look like this:
 |----------|----------|
 | John Doe | 50000.00 |
 | Jane Doe | 45000.00 |
-
