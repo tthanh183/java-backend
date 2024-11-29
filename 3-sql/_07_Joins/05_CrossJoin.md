@@ -17,18 +17,18 @@ Consider the following tables named `employees` and `persons`:
 
 The output of the above query will be:
 
-| emp_id | emp_name      | emp_salary | address     | phone_number |
-|--------|---------------|------------|-------------|--------------|
-| 1      | Alice Johnson | 60000      | 123 Main St | 555-1234     |
-| 2      | Bob Smith     | 75000      | 456 Elm St  | 555-4567     |
-| 3      | Charlie Brown | 80000      | 789 Oak St  | 555-7890     |
-| 4      | Diana Green   | 55000      | NULL        | NULL         |
-| 5      | Edward Black  | 90000      | NULL        | NULL         |
-| 6      | Fiona White   | 95000      | NULL        | NULL         |
-| 7      | George Gray   | 70000      | NULL        | NULL         |
-| 8      | Hannah Blue   | 85000      | NULL        | NULL         |
-| 9      | Ian Red       | 65000      | NULL        | NULL         |
-| 10     | Jackie Purple | 78000      | NULL        | NULL         |
+| emp_id | emp_name      | emp_salary | emp_dept  |
+|--------|---------------|------------|-----------|
+| 1      | Alice Johnson | 60000      | HR        |
+| 2      | Bob Smith     | 75000      | IT        |
+| 3      | Charlie Brown | 80000      | Finance   |
+| 4      | Diana Green   | 55000      | Marketing |
+| 5      | Edward Black  | 90000      | IT        |
+| 6      | Fiona White   | 95000      | Finance   |
+| 7      | George Gray   | 70000      | HR        |
+| 8      | Hannah Blue   | 85000      | Marketing |
+| 9      | Ian Red       | 65000      | HR        |
+| 10     | Jackie Purple | 78000      | IT        |
 
 
 | person_id | person_name   | address     | phone_number |
@@ -62,6 +62,3 @@ The output of the above query will be:
 | 2      | Bob Smith     | 75000      | 789 Oak St  | 555-7890     |
 | ...    | ...           | ...        | ...         | ...          |
 ```
-
-
-
