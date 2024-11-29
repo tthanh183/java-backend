@@ -60,3 +60,4 @@ The output of the above query will be:
 | 7      | George Gray   | 70000      |
 | 9      | Ian Red       | 65000      |
 | 10     | Jackie Purple | 78000      |
+
