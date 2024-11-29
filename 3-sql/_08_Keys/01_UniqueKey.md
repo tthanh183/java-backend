@@ -13,3 +13,13 @@ CREATE TABLE table_name (
     ...
 );
 ```
+
+Create Unique Key on Existing Table:
+```sql
+ALTER TABLE table_name ADD UNIQUE (column_name);
+```
+
+Drop a Unique Key:
+```sql
+ALTER TABLE table_name DROP CONSTRAINT UNIQUE_KEY_NAME;
+```
