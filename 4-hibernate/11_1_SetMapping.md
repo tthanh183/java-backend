@@ -187,7 +187,7 @@ public class Certificate {
 ``` 
 
 > [!NOTE]
-> - The mapping document is an XML document having <hibernate-mapping> as the root element which contains two <class> elements corresponding to each class.
+> - The mapping document is an XML document having `<hibernate-mapping>` as the root element which contains two <class> elements corresponding to each class.
 > - The `<class>` elements are used to define specific mappings from a Java classes to the database tables. The Java class name is specified using the `name` attribute of the class element and the database table name is specified using the `table` attribute.
 > - The `<meta>` element is optional element and can be used to create the class description.
 > - The `<id>` element maps the unique ID attribute in class to the primary key of the database table. The `name` attribute of the id element refers to the property in the class and the `column` attribute refers to the column in the database table. The `type` attribute holds the hibernate mapping type, this mapping types will convert from Java to SQL data type.
@@ -380,4 +380,7 @@ mysql> select * from CERTIFICATE;
 |  3 | PMP             |           1 |
 +----+-----------------+-------------+
 ```
+
+
+
 
