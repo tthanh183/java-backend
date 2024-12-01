@@ -186,4 +186,198 @@ public class Certificate {
 </hibernate-mapping>
 ``` 
 
+> [!NOTE]
+> - The mapping document is an XML document having <hibernate-mapping> as the root element which contains two <class> elements corresponding to each class.
+> - The `<class>` elements are used to define specific mappings from a Java classes to the database tables. The Java class name is specified using the `name` attribute of the class element and the database table name is specified using the `table` attribute.
+> - The `<meta>` element is optional element and can be used to create the class description.
+> - The `<id>` element maps the unique ID attribute in class to the primary key of the database table. The `name` attribute of the id element refers to the property in the class and the `column` attribute refers to the column in the database table. The `type` attribute holds the hibernate mapping type, this mapping types will convert from Java to SQL data type.
+> - The `<generator>` element within the id element is used to generate the primary key values automatically. The `class` attribute of the generator element is set to `native` to let hibernate pick up either `identity`, `sequence`, or `hilo` algorithm to create primary key depending upon the capabilities of the underlying database.
+> - The `<property>` element is used to map a Java class property to a column in the database table. The `name` attribute of the element refers to the property in the class and the `column` attribute refers to the column in the database table. The `type` attribute holds the hibernate mapping type, this mapping types will convert from Java to SQL data type.
+> - The `<set>` element is new here and has been introduced to set the relationship between Certificate and Employee classes. We used the `cascade` attribute in the <set> element to tell Hibernate to persist the Certificate objects at the same time as the Employee objects. The `name` attribute is set to the defined `Set` variable in the parent class, in our case it is certificates. For each set variable, we need to define a separate set element in the mapping file.
+> - The `<key>` element is the column in the CERTIFICATE table that holds the foreign key to the parent object i.e. table EMPLOYEE.
+> - The `<one-to-many>` element indicates that one Employee object relates to many Certificate objects and, as such, the Certificate object must have an Employee parent associated with it. You can use either `<one-to-one>`, `<many-to-one>` or `<many-to-many>` elements based on your requirement.
+
+4. **Create Application Class**
+
+```java
+import java.util.*;
+ 
+import org.hibernate.HibernateException; 
+import org.hibernate.Session; 
+import org.hibernate.Transaction;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class ManageEmployee {
+   private static SessionFactory factory; 
+   public static void main(String[] args) {
+      
+      try {
+         factory = new Configuration().configure().buildSessionFactory();
+      } catch (Throwable ex) { 
+         System.err.println("Failed to create sessionFactory object." + ex);
+         throw new ExceptionInInitializerError(ex); 
+      }
+      
+      ManageEmployee ME = new ManageEmployee();
+      /* Let us have a set of certificates for the first employee  */
+      HashSet set1 = new HashSet();
+      set1.add(new Certificate("MCA"));
+      set1.add(new Certificate("MBA"));
+      set1.add(new Certificate("PMP"));
+     
+      /* Add employee records in the database */
+      Integer empID1 = ME.addEmployee("Manoj", "Kumar", 4000, set1);
+
+      /* Another set of certificates for the second employee  */
+      HashSet set2 = new HashSet();
+      set2.add(new Certificate("BCA"));
+      set2.add(new Certificate("BA"));
+
+      /* Add another employee record in the database */
+      Integer empID2 = ME.addEmployee("Dilip", "Kumar", 3000, set2);
+
+      /* List down all the employees */
+      ME.listEmployees();
+
+      /* Update employee's salary records */
+      ME.updateEmployee(empID1, 5000);
+
+      /* Delete an employee from the database */
+      ME.deleteEmployee(empID2);
+
+      /* List down all the employees */
+      ME.listEmployees();
+
+   }
+
+   /* Method to add an employee record in the database */
+   public Integer addEmployee(String fname, String lname, int salary, Set cert){
+      Session session = factory.openSession();
+      Transaction tx = null;
+      Integer employeeID = null;
+      
+      try {
+         tx = session.beginTransaction();
+         Employee employee = new Employee(fname, lname, salary);
+         employee.setCertificates(cert);
+         employeeID = (Integer) session.save(employee); 
+         tx.commit();
+      } catch (HibernateException e) {
+         if (tx!=null) tx.rollback();
+         e.printStackTrace(); 
+      } finally {
+         session.close(); 
+      }
+      return employeeID;
+   }
+
+   /* Method to list all the employees detail */
+   public void listEmployees( ){
+      Session session = factory.openSession();
+      Transaction tx = null;
+      try {
+         tx = session.beginTransaction();
+         List employees = session.createQuery("FROM Employee").list(); 
+         for (Iterator iterator1 = employees.iterator(); iterator1.hasNext();){
+            Employee employee = (Employee) iterator1.next(); 
+            System.out.print("First Name: " + employee.getFirstName()); 
+            System.out.print("  Last Name: " + employee.getLastName()); 
+            System.out.println("  Salary: " + employee.getSalary());
+            Set certificates = employee.getCertificates();
+            for (Iterator iterator2 = certificates.iterator(); iterator2.hasNext();){
+               Certificate certName = (Certificate) iterator2.next(); 
+               System.out.println("Certificate: " + certName.getName()); 
+            }
+         }
+         tx.commit();
+      } catch (HibernateException e) {
+         if (tx!=null) tx.rollback();
+         e.printStackTrace(); 
+      } finally {
+         session.close(); 
+      }
+   }
+   
+   /* Method to update salary for an employee */
+   public void updateEmployee(Integer EmployeeID, int salary ){
+      Session session = factory.openSession();
+      Transaction tx = null;
+      
+      try {
+         tx = session.beginTransaction();
+         Employee employee = (Employee)session.get(Employee.class, EmployeeID); 
+         employee.setSalary( salary );
+         session.update(employee);
+         tx.commit();
+      } catch (HibernateException e) {
+         if (tx!=null) tx.rollback();
+         e.printStackTrace(); 
+      } finally {
+         session.close(); 
+      }
+   }
+   
+   /* Method to delete an employee from the records */
+   public void deleteEmployee(Integer EmployeeID){
+      Session session = factory.openSession();
+      Transaction tx = null;
+      
+      try {
+         tx = session.beginTransaction();
+         Employee employee = (Employee)session.get(Employee.class, EmployeeID); 
+         session.delete(employee); 
+         tx.commit();
+      } catch (HibernateException e) {
+         if (tx!=null) tx.rollback();
+         e.printStackTrace(); 
+      } finally {
+         session.close(); 
+      }
+   }
+}
+```
+
+> [!NOTE] 
+> Compilation and Execution
+> - Create hibernate.cfg.xml configuration file as explained in configuration chapter.  
+> - Create Employee.hbm.xml mapping file as shown above.
+> - Create Employee.java source file as shown above and compile it.
+> - Create Certificate.java source file as shown above and compile it.
+> - Create ManageEmployee.java source file as shown above and compile it.
+> - Execute ManageEmployee binary to run the program.
+
+Output of the above program will be as follows:
+
+```
+First Name: Manoj  Last Name: Kumar  Salary: 4000
+Certificate: MBA
+Certificate: PMP
+Certificate: MCA
+First Name: Dilip  Last Name: Kumar  Salary: 3000
+Certificate: BCA
+Certificate: BA
+First Name: Manoj  Last Name: Kumar  Salary: 5000
+Certificate: MBA
+Certificate: PMP
+Certificate: MCA
+```
+
+The table structure and the data in the EMPLOYEE and CERTIFICATE tables will be as follows:
+
+```
+mysql> select * from EMPLOYEE;
++----+------------+-----------+--------+
+| id | first_name | last_name | salary |
++----+------------+-----------+--------+
+|  1 | Manoj      | Kumar     |   5000 |
+
+mysql> select * from CERTIFICATE;
++----+-----------------+-------------+
+| id | certificate_name | employee_id |
+|  1 | MCA             |           1 |
+|  2 | MBA             |           1 |
+|  3 | PMP             |           1 |
++----+-----------------+-------------+
+```
 
