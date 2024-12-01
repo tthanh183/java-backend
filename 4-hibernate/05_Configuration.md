@@ -48,3 +48,15 @@ Example of hibernate.cfg.xml file with MySQL database:
 > - create-drop: Hibernate creates the schema automatically when the SessionFactory is created and drops the schema when the SessionFactory is closed explicitly.
 > - none: This value disables the automatic DDL generation.
 
+2. **Hibernate Dialect**
+
+A database dialect is a configuration option that allows software to translate general SQL statements into vendor-specific DDL and DML. Different database products, such as PostgreSQL, MySQL, Oracle, and SQL Server, have their own variant of SQL, which are called SQL dialects.
+
+| Database Product | Dialect Class Name                |
+|------------------|-----------------------------------|
+| DB2              | org.hibernate.dialect.DB2Dialect  |
+| MySQL            | org.hibernate.dialect.MySQLDialect|
+| MySQL            | org.hibernate.dialect.MySQL8Dialect|
+| Oracle           | org.hibernate.dialect.OracleDialect|
+| PostgreSQL       | org.hibernate.dialect.PostgreSQLDialect|
+| SQL Server       | org.hibernate.dialect.SQLServerDialect|
