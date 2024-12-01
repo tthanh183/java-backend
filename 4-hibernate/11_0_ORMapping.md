@@ -47,5 +47,3 @@ The mapping of Collection of Components is also possible in a similar way just a
 | Component      | Mapping of Component class using Hibernate               |
 | Collection     | Mapping of Collection of Component class using Hibernate |
 
-
-
