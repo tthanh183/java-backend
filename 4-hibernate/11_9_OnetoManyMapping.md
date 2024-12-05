@@ -339,3 +339,6 @@ public class ManageEmployee {
    }
 }
 ```
+
+> [!NOTE]  
+> With plain Hibernate, you can establish a bidirectional relationship by configuring both the Employee and Certificate sides in the XML mapping files. If only a unidirectional mapping is configured (as in your initial example), the "many" side (Certificate) will not be aware of the "one" side (Employee).
