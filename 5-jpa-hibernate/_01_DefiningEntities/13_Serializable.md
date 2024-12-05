@@ -126,3 +126,9 @@ If the Email class does not implement the Serializable interface, we’ll get Ma
 When sending objects over the wire using HTTP, we usually create specific DTOs (data transfer objects) for this purpose. By creating DTOs, we decouple internal domain objects from external services. If we want to expose our entities directly to the presentation layer without DTOs, then entities must be serializable.
 
 We use the HttpSession object to store relevant data that help us identify users across multiple page visits to our website. The web server can store session data on a disk when shutting down gracefully or transfer session data to another web server in clustered environments. If an entity is part of this process, then it must be serializable. Otherwise, we’ll run into NotSerializableException.
+
+> [!TIP]
+> Serialization is required in the following cases: 
+> - When an entity is detached and passed outside the JVM (e.g., via remote calls or REST API)
+> - When an entity contains complex field types or collections that need to be transferred across JVMs or systems.
+> - When a composite key (e.g., @EmbeddedId or @IdClass) is used, ensuring proper entity mapping and persistence
