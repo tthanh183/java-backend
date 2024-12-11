@@ -115,8 +115,35 @@ Another way to map the results is to use the resultSetMapping property. Here, we
 
 Note that we can use only one of resultClass and resultSetMapping.
 
+- Using the Named Native Query
 
+To use the named native query, we can use the Session.createNamedQuery():
 
+```
+Query<DeptEmployee> query = session.createNamedQuery("DeptEmployee_FindByEmployeeName", DeptEmployee.class);
+query.setParameter("name", "John Wayne");
+DeptEmployee result = query.getSingleResult();
+```
 
+Or the Session.getNamedNativeQuery():
 
+```
+NativeQuery query = session.getNamedNativeQuery("DeptEmployee_FindByEmployeeName");
+query.setParameter("name", "John Wayne");
+DeptEmployee result = (DeptEmployee) query.getSingleResult();
+```
 
+The only difference between these two approaches is the return type. The second approach returns a NativeQuery, which is a subclass of Query.
+
+5. **Stored Procedures and Functions**
+
+We can use the @NamedNativeQuery annotation to define calls to stored procedures and functions as well:
+
+```java
+@org.hibernate.annotations.NamedNativeQuery(
+  name = "DeptEmployee_UpdateEmployeeDesignation", 
+  query = "call UPDATE_EMPLOYEE_DESIGNATION(:employeeNumber, :newDesignation)", 
+  resultClass = DeptEmployee.class)
+```
+
+Notice that although this is an update query, we’ve used the resultClass property. This is because Hibernate doesn’t support pure native scalar queries. And the way to work around the problem is to either set a resultClass or a resultSetMapping.
