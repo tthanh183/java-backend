@@ -194,8 +194,3 @@ The exact rules between these two are as follows:
 - with FetchMode.JOIN set, FetchType is ignored and a query is always eager
 
 For further information please refer to Eager/Lazy Loading In Hibernate.
-
-
-
-
-
